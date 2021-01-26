@@ -1,4 +1,8 @@
+import { Notice } from './../../models/notice.model';
 import { Component, OnInit } from '@angular/core';
+
+import { NoticeService } from './../../notice.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+
+  notices: Notice[] = [];
+
+  constructor(private noticeService: NoticeService) { }
 
   ngOnInit(): void {
+    this.noticeService.listAll().subscribe((notices)=> {
+      this.notices = notices;
+      console.log(notices);
+      
+    })
   }
 
 }
