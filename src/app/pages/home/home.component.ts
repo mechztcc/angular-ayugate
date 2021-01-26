@@ -11,6 +11,7 @@ import { NoticeService } from './../../notice.service';
 })
 export class HomeComponent implements OnInit {
 
+  items = [1,2,3];
 
   notices: Notice[] = [];
 

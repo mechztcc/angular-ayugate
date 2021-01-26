@@ -9,6 +9,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { NoticeCardComponent } from './template/notice-card/notice-card.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [ NoticeService ],
   bootstrap: [AppComponent]

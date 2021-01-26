@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Notice } from 'src/app/models/notice.model';
 
 @Component({
   selector: 'app-notice-card',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticeCardComponent implements OnInit {
 
+  @Input() notice: any;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log(this.notice);
+    
   }
 
 }
