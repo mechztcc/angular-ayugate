@@ -1,0 +1,17 @@
+
+.card-title {
+    /* background-color: #2a9d8f; */
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.autor {
+    font-weight: 500;
+    color: rgb(87, 87, 87);
+}
+
+
+.card:hover {
+    border: 1px dashed  #2a9d8f ;
+}
