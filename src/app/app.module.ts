@@ -9,7 +9,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { NoticeCardComponent } from './template/notice-card/notice-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewnoticeComponent } from './pages/newnotice/newnotice.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [ NoticeService ],

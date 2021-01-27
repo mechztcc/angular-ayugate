@@ -6,19 +6,28 @@
         <div class="card-body">
             <h5 class="card-title bg-primary text-light text-center">Criar nova notícia</h5>
 
-            <form>
+            <form [formGroup]="form">
                 <div class="form-group">
-                    <input class="form-control mt-1" type="text" placeholder="Título" name="titulo" [(ngModel)]="notice.titulo">
-                    <textarea class="form-control mt-1" name="" id="" cols="30" rows="10" name="descricao" [(ngModel)]="notice.descricao"></textarea>
-                    <input class="form-control mt-1" type="text" placeholder="Autor" name="autor" [(ngModel)]="notice.autor">
+                    <input class="form-control mt-1" type="text" placeholder="Título" name="titulo" formControlName="titulo">
+                    <div *ngIf="form.controls.titulo.invalid && !form.controls.titulo.pristine" class="alert alert-danger mt-1">
+                        Titulo inválido!
+                    </div>
+                    <textarea class="form-control mt-1" name="" id="" cols="30" rows="10" name="descricao" formControlName="descricao"></textarea>
+                    <div *ngIf="form.controls.descricao.invalid && !form.controls.descricao.pristine" class="alert alert-danger mt-1">
+                        Descrição inválida!
+                    </div>
+                    <input class="form-control mt-1" type="text" placeholder="Autor" name="autor" formControlName="autor">
+                    <div *ngIf="form.controls.autor.invalid && !form.controls.autor.pristine" class="alert alert-danger mt-1">
+                        Campo autor inválido!
+                    </div>
                     <div class="d-flex align-items-center">
-                        <input type="checkbox" name="status" id="" [(ngModel)]="notice.status" value="1">
+                        <input type="checkbox" name="status" id="" formControlName="status" value="1">
                         <span class="ml-1">Tornar visível</span>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between">
                     <a href="/" class="btn btn-outline-danger btn-sm">Cancelar</a>
-                    <button class="btn btn-outline-primary btn-sm" (click)="createNotice()">Criar</button>
+                    <button class="btn btn-outline-primary btn-sm" (click)="saveNotice()">Criar</button>
     
                 </div>
             </form>
