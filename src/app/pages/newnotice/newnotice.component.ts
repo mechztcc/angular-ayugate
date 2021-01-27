@@ -18,6 +18,7 @@ export class NewnoticeComponent implements OnInit {
   form: FormGroup;
 
   notice: Notice = {
+    id: 0,
     titulo: '',
     descricao: '',
     autor: '',
@@ -70,5 +71,7 @@ export class NewnoticeComponent implements OnInit {
     // console.log(this.notice);
     
   }
+
+ 
 
 }

@@ -28,6 +28,10 @@ export class NoticeService {
     return this.http.post<Notice>(`${this.baseUrl}/cadastro/novo`, notice)
   }
 
+  delete(id: number): Observable<Notice> {
+    return this.http.delete<Notice>(`${this.baseUrl}/excluir/${id}`)
+  }
+
 
 
 }
