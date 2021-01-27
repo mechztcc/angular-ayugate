@@ -32,6 +32,12 @@ export class NoticeService {
     return this.http.delete<Notice>(`${this.baseUrl}/excluir/${id}`)
   }
 
+  readById(id: number): Observable<Notice> {
+    return this.http.get<Notice>(`${this.baseUrl}/listar/${id}`)
+  }
 
+  update(notice: Notice): Observable<Notice> {
+    return this.http.put<Notice>(`${this.baseUrl}/alterar`, notice);
+  }
 
 }

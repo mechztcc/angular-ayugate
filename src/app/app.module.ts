@@ -10,6 +10,7 @@ import { NoticeCardComponent } from './template/notice-card/notice-card.componen
 import { HttpClientModule } from '@angular/common/http';
 import { NewnoticeComponent } from './pages/newnotice/newnotice.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditNoticeComponent } from './pages/edit-notice/edit-notice.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     NoticeCardComponent,
-    NewnoticeComponent
+    NewnoticeComponent,
+    EditNoticeComponent
   ],
   imports: [
     BrowserModule,

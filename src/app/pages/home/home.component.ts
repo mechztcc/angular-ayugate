@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.noticeService.listAll().subscribe((notices)=> {
       this.notices = notices;
-      // console.log(notices);
+
       
     })
   }
