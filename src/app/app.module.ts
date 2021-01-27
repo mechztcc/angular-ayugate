@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './template/header/header.component';
 import { NoticeCardComponent } from './template/notice-card/notice-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewnoticeComponent } from './pages/newnotice/newnotice.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    NoticeCardComponent
+    NoticeCardComponent,
+    NewnoticeComponent
   ],
   imports: [
     BrowserModule,

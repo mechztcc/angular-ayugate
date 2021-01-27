@@ -8,7 +8,7 @@ import { Notice } from 'src/app/models/notice.model';
 })
 export class NoticeCardComponent implements OnInit {
 
-  @Input() notice: any;
+  @Input() notice: Notice;
 
   constructor() { }
 
