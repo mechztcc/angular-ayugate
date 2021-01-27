@@ -29,9 +29,11 @@ export class NewnoticeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createNotice(notice: Notice): void {
+  createNotice(): void {
 
     this.noticeService.create(this.notice).subscribe(() => {
+      console.log(this.notice.status);
+      
       this.router.navigate(['/'])
     })
     

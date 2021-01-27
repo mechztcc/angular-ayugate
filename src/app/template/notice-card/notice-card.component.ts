@@ -14,7 +14,7 @@ export class NoticeCardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.notice);
+    // console.log(this.notice);
     
   }
 
