@@ -1,1 +1,28 @@
 <app-header [createPage]="createPage"></app-header>
+
+<div class="d-flex justify-content-center">
+    <div class="card mt-5" style="width: 20rem;">
+
+        <div class="card-body">
+            <h5 class="card-title bg-primary text-light text-center">Criar nova notícia</h5>
+
+            <form>
+                <div class="form-group">
+                    <input class="form-control mt-1" type="text" placeholder="Título" name="titulo" [(ngModel)]="notice.titulo">
+                    <textarea class="form-control mt-1" name="" id="" cols="30" rows="10" name="descricao" [(ngModel)]="notice.descricao"></textarea>
+                    <input class="form-control mt-1" type="text" placeholder="Autor" name="autor" [(ngModel)]="notice.autor">
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" name="" id="">
+                        <span class="ml-1">Tornar visível</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="/" class="btn btn-outline-danger btn-sm">Cancelar</a>
+                    <button class="btn btn-outline-primary btn-sm" (click)="createNotice()">Criar</button>
+    
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

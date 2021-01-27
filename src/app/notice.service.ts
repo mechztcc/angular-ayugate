@@ -11,19 +11,22 @@ import { Notice } from './models/notice.model';
 })
 export class NoticeService {
 
-  baseUrl: string = 'https://olinda-tech.top/angular-teste/noticia/listar';
+  baseUrl: string = 'https://olinda-tech.top/angular-teste/noticia';
+  
 
   constructor(private http: HttpClient) { }
 
 
   listAll():Observable<Notice[]> {
-    return this.http.get<Notice[]>(this.baseUrl).pipe(
+    return this.http.get<Notice[]>(`${this.baseUrl}/listar`).pipe(
       map(obj => obj)
       // tratar possivel error aqui!
     )
   }
 
-
+  create(notice: Notice): Observable<Notice> {
+    return this.http.post<Notice>(`${this.baseUrl}/cadastro/novo`, notice)
+  }
 
 
 
