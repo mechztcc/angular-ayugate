@@ -26,13 +26,13 @@ export class EditNoticeComponent implements OnInit {
   constructor(private fb: FormBuilder, private noticeService: NoticeService, private router: Router, private route: ActivatedRoute) {
     this.form = this.fb.group({
       titulo: ['', Validators.compose([
-        Validators.required, Validators.minLength(3),Validators.maxLength(22)
+        Validators.required, Validators.minLength(3),Validators.maxLength(50)
       ])],
       descricao: ['', Validators.compose([
-        Validators.required, Validators.minLength(10),Validators.maxLength(100)
+        Validators.required, Validators.minLength(10),Validators.maxLength(500)
       ])],
       autor: ['', Validators.compose([
-        Validators.required, Validators.maxLength(8)
+        Validators.required, Validators.maxLength(20)
       ])],
       status: ['']
     })
